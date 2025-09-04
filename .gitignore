@@ -1,0 +1,52 @@
+# --- Java / Maven build output ---
+target/
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+dependency-reduced-pom.xml
+
+# If you don't want students committing JARs/ZIPs:
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+
+# --- IDEs ---
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse (some students will open in Eclipse at home)
+.project
+.classpath
+.settings/
+
+# VS Code
+# Ignore VS Code's *state* but keep the config we provide
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# --- OS cruft ---
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Tools we DO want committed (so do NOT ignore) ---
+# .devcontainer/    <-- keep this in repo if/when we add it
+# .mvn/             <-- keep Maven Wrapper directory
+# mvnw, mvnw.cmd    <-- keep Maven Wrapper scripts

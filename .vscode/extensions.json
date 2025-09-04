@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "vscjava.vscode-java-pack",     // Java language server, debugger, test runner, Maven, project manager
+    "google.google-java-format",    // Keeps indentation nice
+    "eamodio.gitlens",              // Helpful blame/history UI (great for teaching commits)
+    "usernamehw.errorlens"          // Surfaces errors inline so students fix them faster
+  ],
+  "unwantedRecommendations": [
+    "redhat.java.problem-matcher",  // (redundant with the Java Pack in most setups)
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers"
+  ]
+}

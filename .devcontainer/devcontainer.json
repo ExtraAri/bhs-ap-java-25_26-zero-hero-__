@@ -1,0 +1,41 @@
+{
+  "name": "Java (JDK 21 + Maven)",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installMaven": true,
+      "installGradle": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "google.google-java-format",
+        "usernamehw.errorlens",
+        "eamodio.gitlens",
+        "github.classroom"
+      ],
+      "settings": {
+        "java.jdt.ls.java.home": "${env:JAVA_HOME}",
+        "java.jdt.ls.downloadJdk": false,
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-21",
+            "path": "${env:JAVA_HOME}",
+            "default": true
+          }
+        ],
+        "java.codeLens.runForMain": false,
+        "java.debug.showCodeLens": false,
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.project.importOnFirstTimeStartup": "automatic",
+        "java.server.launchMode": "Standard",
+        "java.autobuild.enabled": true,
+        "java.debug.settings.forceBuildBeforeLaunch": true
+      }
+    }
+  }
+}

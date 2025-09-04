@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+  <!-- 2.1 Header: 4 single-line comments at very top -->
+  <!-- Line 1: Student name — at least 2 words, allows apostrophes/hyphens -->
+  <!-- Line 1 check -->
+  <!-- Line 1 must be exactly: // First Last -->
+  <module name="RegexpMultiline">
+    <property name="format" value="\A\uFEFF?// [A-Za-z]{2,}\s[A-Za-z]{3,}\s*(?:\r?\n)"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="message" value="Line 1 must be: // First Last (letters only, single space between)."/>
+  </module>
+
+  <!-- Line 2 check (includes line 1, then requires exact line 2) -->
+  <module name="RegexpMultiline">
+    <property name="format" value="\A// [A-Za-z]{2,}\s[A-Za-z]{3,}\s*\R// P: [1-7]\R"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="message" value='Line 2 must be: // P: 1–7 (exact spacing).'/>
+  </module>
+
+  <!-- Line 3 check (includes line 1–2, then requires title line) -->
+  <module name="RegexpMultiline">
+    <property name="format" value="\A// [A-Za-z]{2,}\s[A-Za-z]{3,}\s*\R// P: [1-7]\R// .*?[A-Za-z].*?[A-Za-z].*?[A-Za-z].*\R"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="message" value="Line 3 must be a project title with at least 3 letters."/>
+  </module>
+
+  <!-- Line 4 check (includes line 1–3, then requires date line) -->
+  <module name="RegexpMultiline">
+    <property name="format" value="\A// [A-Za-z]{2,}\s[A-Za-z]{3,}\s*\R// P: [1-7]\R// .*?[A-Za-z].*?[A-Za-z].*?[A-Za-z].*\R// (?:\d{4}-\d{2}-\d{2}|\d{1,2}/\d{1,2}/\d{4})\s*\R?"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="message" value="Line 4 must be a date: YYYY-MM-DD or MM/DD/YYYY."/>
+  </module>
+
+
+
+  <!-- 2.2 Block with DESCRIPTION/INPUT/OUTPUT/EDGE CASE in order -->
+  <module name="RegexpMultiline">
+    <property name="format"
+      value="/\*\s*\R\s*\*\s*DESCRIPTION:\s*[\s\S]*?\R\s*\*\s*INPUT:\s*[\s\S]*?\R\s*\*\s*OUTPUT:\s*[\s\S]*?\R\s*\*\s*EDGE CASE:\s*[\s\S]*?\R\s*\*/"/>
+    <property name="fileExtensions" value="java"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="message"
+      value="Missing required description block with DESCRIPTION, INPUT, OUTPUT, and EDGE CASE sections (in that order)."/>
+  </module>
+
+  <!-- 2.3 Each label line must have ≥4 words on that same line -->
+  <!-- Use RegexpSingleline so comment lines are checked; require at least 1 match -->
+  <module name="RegexpSingleline">
+    <property name="format" value="^\s*\*\s*DESCRIPTION:\s*(?:\b\w+\b\s+){3,}\b\w+\b\s*$"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="fileExtensions" value="java"/>
+    <property name="message" value="DESCRIPTION must have at least 4 words on its label line."/>
+  </module>
+
+  <module name="RegexpSingleline">
+    <property name="format" value="^\s*\*\s*INPUT:\s*(?:\b\w+\b\s+){3,}\b\w+\b\s*$"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="fileExtensions" value="java"/>
+    <property name="message" value="INPUT must have at least 4 words on its label line."/>
+  </module>
+
+  <module name="RegexpSingleline">
+    <property name="format" value="^\s*\*\s*OUTPUT:\s*(?:\b\w+\b\s+){3,}\b\w+\b\s*$"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="fileExtensions" value="java"/>
+    <property name="message" value="OUTPUT must have at least 4 words on its label line."/>
+  </module>
+
+  <module name="RegexpSingleline">
+    <property name="format" value="^\s*\*\s*EDGE CASE:\s*(?:\b\w+\b\s+){3,}\b\w+\b\s*$"/>
+    <property name="minimum" value="1"/>         <!-- require the pattern -->
+    <property name="maximum" value="1"/>         <!-- and at most once -->
+    <property name="fileExtensions" value="java"/>
+    <property name="message" value="EDGE CASE must have at least 4 words on its label line."/>
+  </module>
+
+</module>

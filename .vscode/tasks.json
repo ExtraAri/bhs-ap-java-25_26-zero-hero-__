@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "mvn-run",
+      "type": "shell",
+      "command": "./mvnw -q -DskipTests=false clean process-sources exec:java",
+      "problemMatcher": []
+    },
+    {
+      "label": "mvn-style-checks",
+      "type": "shell",
+      "command": "./mvnw spotless:check checkstyle:check",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Format (Spotless)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "./mvnw -q spotless:apply"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "xpra-up",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -e; if ! command -v xpra >/dev/null 2>&1; then sudo apt-get update && sudo apt-get install -y xpra; fi; mkdir -p .devcontainer; if ! pgrep -x xpra >/dev/null; then xpra start :100 --bind-tcp=0.0.0.0:9876 --html=on --xvfb=\"Xvfb -screen 0 1280x800x24 -nolisten tcp -ac\" --daemon=yes; fi; echo \"Xpra ready at forwarded port 9876 (HTML5 viewer)\";"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

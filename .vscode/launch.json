@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run Main (console)",
+      "request": "launch",
+      "mainClass": "edu.bhscs.Main",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Style check",
+      "request": "launch",
+      "mainClass": "edu.bhscs.Main",
+      "console": "integratedTerminal",
+      "preLaunchTask": "mvn-style-checks"
+    },
+    {
+      "type": "java",
+      "name": "Run Main (GUI via Xpra)",
+      "request": "launch",
+      "mainClass": "edu.bhscs.Main",
+      "console": "integratedTerminal",
+      "preLaunchTask": "xpra-up",
+      "env": { "DISPLAY": ":99", "LIBGL_ALWAYS_SOFTWARE": "1" }
+    }
+  ]
+}
