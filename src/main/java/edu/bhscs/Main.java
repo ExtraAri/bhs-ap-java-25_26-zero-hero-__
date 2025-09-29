@@ -2,7 +2,13 @@
 // P2
 // Zero Hero
 // 9/19/25
-
+/*
+ *DESCRIPTION
+ *Baker make a cake
+ *bake it at a bakery
+ sel it to a customer
+ deliver money to PTA
+ */
 /*
  * DESCRIPTION:
  * INPUT:
@@ -10,16 +16,20 @@
  * EDGE CASE:
  */
 
- package edu.bhscs;
+package edu.bhscs;
 
 public class Main {
+  Baker myBaker = new Baker();
+  Cake cakeFromBaker = myBaker.bakeCake();
+  Store DowntownStore = new Store("Downtown", "Chocolate Cake");
+  Toppings availableToppings = new Toppings("Oreo", "Sprinkles", "Whipped Cream", "Ice Cream", "Cherries", "Nuts", "Syrup");
+
   public static void main(String[] args) {
-    String myString = ("Garlic");
-    System.out.println(myString);
+
     String theGoodStuff = "chocolate";
     Cake TheOneBestCake = new Cake(theGoodStuff);
     TheOneBestCake.eaten();
   }
-  //to be weighed
+  // to be weighed
 
-  }
+}
