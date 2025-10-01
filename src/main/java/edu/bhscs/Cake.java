@@ -8,8 +8,9 @@ public class Cake {
   String flavor;
 
   /// I have to make a constructor
-  public Cake(String ingredient) {
+  public Cake(String ingredient, Flour flour) {
     System.out.println("Baking the cake with....." + ingredient + " Nah we only got vanilla");
+    this.flour = flour;
     this.weight = 10;
   }
 
