@@ -1,3 +1,5 @@
+package edu.bhscs;
+
 public class Flour {
   // Fields and properties
   int price;

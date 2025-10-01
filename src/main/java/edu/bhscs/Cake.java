@@ -6,6 +6,7 @@ public class Cake {
   String otherIngredient;
   int weight;
   String flavor;
+  Flour flour;
 
   /// I have to make a constructor
   public Cake(String ingredient, Flour flour) {
