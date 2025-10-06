@@ -1,4 +1,5 @@
 package edu.bhscs;
+
 public class Customer {
   // fields and properties
   private String name;

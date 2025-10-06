@@ -13,21 +13,12 @@
 package edu.bhscs;
 
 public class Main1 {
-  //constructor; something that makes an instance of the clas
+  // constructor; something that makes an instance of the clas
   // methods: The instructions (recipe)
-
 
   // my main class is fixed, therefore static
 
   public static void main(String[] args) {
-    //New Bakery();
+    // New Bakery();
   }
 }
-
-
-
-
-
-
-
-
