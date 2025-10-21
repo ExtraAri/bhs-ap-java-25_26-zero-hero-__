@@ -22,7 +22,7 @@ public class Cake {
   int z;
 
   // I have to make a constructor
-  /*   public Cake(String ingredient, Flour flour, int skill, int size, int height) {
+  public Cake(String ingredient, Flour flour, int skill, int size, int height) {
       // CONSTRUCTOR
       this.flour = flour;
       this.weight = 10;
@@ -32,11 +32,24 @@ public class Cake {
       this.color = ingredient;
       this.frosting = "yumm";
     }
-  */
+
   public Cake() {}
   ;
 
   // METHODS
+
+/*  public void draw(String name, String age){
+    System.out.println("I am drawing!");
+  for (int y = 0; y < 5; y++);{
+    for(int x=0; x<10; x++){
+
+      System.out.println("l");
+      System.out.println("o");
+      System.out.println("t");
+      System.out.println("s");
+    }
+  }
+  */
 
   public void printCake() {
     for (int i = 0; i < 5; i++) {

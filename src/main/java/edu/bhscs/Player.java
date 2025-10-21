@@ -1,8 +1,34 @@
 package edu.bhscs;
 
-import java.util.Scanner;
+///import java.util.Scanner;
 
 public class Player {
+  ///FIELDS AND PROPERTIES
+
+  public Player(String name) {
+//CONSTRUCTOR
+
+  }
+
+
+
+  //METHODS
+  public String giveAnswer(){
+    return "this is an answer?";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*public class Player {
   String name;
   Scanner s;
   int accomplishments;
@@ -28,3 +54,4 @@ public class Player {
     return s.nextLine();
   }
 }
+*/
