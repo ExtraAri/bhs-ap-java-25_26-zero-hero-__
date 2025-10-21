@@ -1,30 +1,76 @@
 package edu.bhscs;
 
+/// CREATE A FUNCTIONING CAKE CLASS THAT WORKS WITH THE MAIN CLASS - DONE
+/// WHAT I WANT TO DO TODAY IS CREATE AN X Y AND Z AXIS FOR A CAKE  - DONE
+/// MAKE IT PRINT SOMETHING FOR THAT CAKE - DONE
+/// MAKE IT SO IT IS A LOOP SO IT PRINTS MULTIPLE TIMES - DONE
+/// MAKE IT WHEN IT PRINTS, IT SUCCESSFULLY PRINTS A CAKE -DONE
 public class Cake {
-
-  String ingredient;
-  String otherIngredient;
+  // FIELDS AND PROPERTIES
+  String frosting = "####";
+  String color;
   int weight;
   String flavor;
   Flour flour;
+  int quality;
+  int price;
+  // dimensions of a cake
+  int size;
+  int height;
+  int x;
+  int y;
+  int z;
 
-  /// I have to make a constructor
-  public Cake(String ingredient, Flour flour) {
-    System.out.println("Baking the cake with....." + ingredient + " Nah we only got vanilla");
-    this.flour = flour;
-    this.weight = 10;
+  // I have to make a constructor
+  /*   public Cake(String ingredient, Flour flour, int skill, int size, int height) {
+      // CONSTRUCTOR
+      this.flour = flour;
+      this.weight = 10;
+      this.quality = skill;
+      this.size = size;
+      this.height = height;
+      this.color = ingredient;
+      this.frosting = "yumm";
+    }
+  */
+  public Cake() {}
+  ;
+
+  // METHODS
+
+  public void printCake() {
+    for (int i = 0; i < 5; i++) {
+      System.out.println(this.frosting);
+    }
   }
 
-  String getDisplay() {
-    return flavor;
+  public void growCake(int x, int y, int z) {
+    this.x += x;
+    this.y += y;
+    this.z += z;
   }
 
-  // to be eaten
-  public void eaten() {
-    this.weight = this.weight - 2;
+  /// ___________________________________
+  /// ///////// _____________
+  /// ||||||||| #########    |
+  /// ||||||||| #########    |
+  /// ||||||||| #########    |
+  /// ||||||||| #########    |
+  /// ||||||||| #########   /
+  /// ||||||||| ######### /
+  public void draw() {
+    for (int y = 0; y < this.y; y++) {
+      for (int x = 0; x < this.x; x++) {
+        System.out.print("#");
+      }
+      for (int z = 0; z < this.z; z++) {
+        System.out.print("   |");
+
+
+        }
+
+      }
+      System.out.println(" ");
+    }
   }
 
-  public int getWeight() {
-    return this.weight;
-  }
-}

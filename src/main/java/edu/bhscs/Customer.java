@@ -2,15 +2,23 @@ package edu.bhscs;
 
 public class Customer {
   // fields and properties
-  private String name;
+  String name;
   private int walletMoney;
 
-  public Customer(String name, int walletmoney) {
-    this.name = name;
+  public Customer(String cake, int walletmoney) {
+    this.name = cake;
     this.walletMoney = walletmoney;
   }
 
   // methods
+  public int pay(int amount) {
+    if (amount <= walletMoney) {
+      walletMoney -= amount;
+      return amount;
+    } else {
+      return 0; // Not enough money
+    }
+  }
 
   public String getName() {
     return name;
@@ -18,5 +26,9 @@ public class Customer {
 
   public int getWalletMoney() {
     return walletMoney;
+  }
+
+  public String takeCake(Cake c) {
+    return "Yum! I got a " + " cake!";
   }
 }
