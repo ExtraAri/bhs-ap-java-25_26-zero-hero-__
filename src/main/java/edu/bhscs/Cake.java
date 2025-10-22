@@ -23,22 +23,22 @@ public class Cake {
 
   // I have to make a constructor
   public Cake(String ingredient, Flour flour, int skill, int size, int height) {
-      // CONSTRUCTOR
-      this.flour = flour;
-      this.weight = 10;
-      this.quality = skill;
-      this.size = size;
-      this.height = height;
-      this.color = ingredient;
-      this.frosting = "yumm";
-    }
+    // CONSTRUCTOR
+    this.flour = flour;
+    this.weight = 10;
+    this.quality = skill;
+    this.size = size;
+    this.height = height;
+    this.color = ingredient;
+    this.frosting = "yumm";
+  }
 
   public Cake() {}
   ;
 
   // METHODS
 
-/*  public void draw(String name, String age){
+  /*  public void draw(String name, String age){
     System.out.println("I am drawing!");
   for (int y = 0; y < 5; y++);{
     for(int x=0; x<10; x++){
@@ -78,12 +78,8 @@ public class Cake {
       }
       for (int z = 0; z < this.z; z++) {
         System.out.print("   |");
-
-
-        }
-
       }
       System.out.println(" ");
     }
   }
-
+}

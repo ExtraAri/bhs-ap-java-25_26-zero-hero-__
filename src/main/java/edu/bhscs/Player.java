@@ -1,32 +1,20 @@
 package edu.bhscs;
 
-///import java.util.Scanner;
+/// import java.util.Scanner;
 
 public class Player {
-  ///FIELDS AND PROPERTIES
+  /// FIELDS AND PROPERTIES
 
   public Player(String name) {
-//CONSTRUCTOR
+    // CONSTRUCTOR
 
   }
 
-
-
-  //METHODS
-  public String giveAnswer(){
+  // METHODS
+  public String giveAnswer() {
     return "this is an answer?";
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 /*public class Player {
   String name;
