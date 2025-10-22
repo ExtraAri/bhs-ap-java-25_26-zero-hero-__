@@ -5,7 +5,7 @@ public class Main {
   public static void main(String[] args) {
 
     Cake newCake = new Cake();
-    newCake.growCake(9, 5, 1);
+    newCake.growCake(10, 6, 1);
     newCake.draw();
 
     System.out.println("Hello" + newCake);

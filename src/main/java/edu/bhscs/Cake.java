@@ -81,21 +81,18 @@ public class Cake {
       }
       System.out.println(" ");
     }
-    for (int x = 0; x < this.x; x++) {
-      System.out.print("#");
+    for (int i = 0; i < 3; i++) {
+      for (int x = 0; x < this.x; x++) {
+        System.out.print("#");
+      }
+      for (int w = i; w < 2; w++) {
+        System.out.print(" ");
 
+      }
+      System.out.println("/");
     }
-    System.out.println("  /");
-    for (int x = 0; x < this.x; x++) {
-      System.out.print("#");
 
-    }
-    System.out.println(" /");
-    for (int x = 0; x < this.x; x++) {
-      System.out.print("#");
 
-    }
-    System.out.println("/");
 
 
 
