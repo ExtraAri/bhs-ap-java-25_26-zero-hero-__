@@ -1,25 +1,37 @@
 package edu.bhscs;
 
 public class Table {
-  //fields and properties
+  // fields and properties
+  int counter;
   int legs;
-  int width;
 
-  //constructor
-  public Table(int legs, int width){
+  // constructor
+  public Table(int counter, int legs) {
+    this.counter = counter;
     this.legs = legs;
-    this.width = width;
-  System.out.println("ITS ALIVE!");
+    System.out.println("ITS ALIVE!");
   }
 
-public void draw(){
-  for(int i =0; i< this.legs; i++){
-    System.out.println("|   |");
-    for(int j=0; j< this.width; j++){
-      System.out.print("-");
+  public void draw() {
+    for (int x = 0; x < this.counter; x++) {
+      System.out.print("=");
+
+      for (int y = 0; y < this.counter; y++) {
+        System.out.print("-");
+      }
     }
+    System.out.println();
+
+    for (int z = 0; z < this.legs; z++) {
+      for (int r = 0; r < this.counter; r++) {
+        System.out.print(" [-] ");
+        System.out.print(" ");
+      }
+      System.out.println();
+    }
+
     System.out.println();
   }
 }
-  //methods
-}
+
+  // methods

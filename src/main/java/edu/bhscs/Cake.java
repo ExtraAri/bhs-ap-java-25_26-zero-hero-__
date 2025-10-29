@@ -22,6 +22,11 @@ public class Cake {
   int z;
 
   // I have to make a constructor
+  public Cake(int skill, int size, String buyerName) {
+    this.size = skill + 2;
+    System.out.println("Here is the cake for " + buyerName);
+  }
+
   public Cake(String ingredient, Flour flour, int skill, int size, int height) {
     // CONSTRUCTOR
     this.flour = flour;
@@ -94,8 +99,8 @@ public class Cake {
     }
   }
 
-public void draw(Table t){
-  this.draw();
-  t.draw();
-}
+  public void draw(Table t) {
+    this.draw();
+    t.draw();
+  }
 }
