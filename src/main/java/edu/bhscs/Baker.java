@@ -45,7 +45,7 @@ public class Baker {
 
   Cake bakes(int size, String buyerName) {
     this.skill++;
-    System.out.println(this.name + " is baking a cake for " + buyerName);
+    /// System.out.println(this.name + " is baking a cake for " + buyerName);
     return new Cake(size, this.skill, buyerName);
   }
 }

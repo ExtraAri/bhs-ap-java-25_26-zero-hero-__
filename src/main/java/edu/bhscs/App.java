@@ -5,6 +5,7 @@ package edu.bhscs;
 /// UTULIZE LOOPS TO DRAW THINGS (LIKE TABLES)
 public class App {
   public static void main(String[] args) {
+    date10_28();
     date10_27();
     // Player user = new Player("me");
     // System.out.println(user);
@@ -12,6 +13,12 @@ public class App {
 
     // new Cake().draw("name", "age");
 
+  }
+
+  public static void date10_28() {
+    Cake newCake = new Cake();
+    newCake.growCake(20, 8, 1);
+    newCake.draw();
   }
 
   public static void date10_27() {

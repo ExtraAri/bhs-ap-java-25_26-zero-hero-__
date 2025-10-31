@@ -9,7 +9,6 @@ public class Table {
   public Table(int counter, int legs) {
     this.counter = counter;
     this.legs = legs;
-    System.out.println("ITS ALIVE!");
   }
 
   public void draw() {
@@ -21,7 +20,6 @@ public class Table {
       }
     }
     System.out.println();
-
     for (int z = 0; z < this.legs; z++) {
       for (int r = 0; r < this.counter; r++) {
         System.out.print(" [-] ");
